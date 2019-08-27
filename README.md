@@ -31,7 +31,10 @@ welcome to the claculator app.Check the options for calculation <br/>
    Result is :5
 # check for divide by zero
   the program checks whether denominator is equal to 0 or not.if so it asks user to re enter the denominator.
-
+# program files
+   <br/> Calculator.scala is developed using class and objects
+   <br/> SCalaCalculatorNew.scala is developed using functions
+   <br/> ScalaCalculator.scala is developed without using functions and class
 
 
 
