@@ -32,7 +32,7 @@ object ScalaCalculator
                        else{op1/op2}
                       }
 		    case 5 => {op1 % op2}
-		    case _ => "Sorry you have to entered option not present in calculator"
+		    case _ => "Sorry your entered option is not present in calculator"
 		}
 		// call calculator_match with option as argument,store in result.
 		val result = calculator_match(x)
