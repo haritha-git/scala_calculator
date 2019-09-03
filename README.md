@@ -29,7 +29,7 @@ welcome to the claculator app.Check the options for calculation <br/>
    Enter your option number<br/>
    4<br/>
    Result is :5<br/>
-# updated single digit expression calculatore
+# updated single digit expression calculator
 <br/>scalac ExprCalculator.scala 
 <br/> scala ExprCalculaor
 <br/>example 2+3*4/2
