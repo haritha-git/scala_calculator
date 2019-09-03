@@ -29,7 +29,8 @@ welcome to the claculator app.Check the options for calculation <br/>
    Enter your option number<br/>
    4<br/>
    Result is :5<br/>
-2.scalac ExprCalculator.scala <br/>
+# updated single digit expression calculatore
+<br/>scalac ExprCalculator.scala 
 <br/> scala ExprCalculaor
 <br/>example 2+3*4/2
 <br/>result is 8 like calculator with precedence 
