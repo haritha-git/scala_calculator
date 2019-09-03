@@ -28,8 +28,8 @@ welcome to the claculator app.Check the options for calculation <br/>
    5 <br/>
    Enter your option number<br/>
    4<br/>
-   Result is :5
-<br/> scalac ExprCalculator.scala
+   Result is :5<br/>
+2.scalac ExprCalculator.scala <br/>
 <br/> scala ExprCalculaor
 <br/>example 2+3*4/2
 <br/>result is 8 like calculator with precedence 
