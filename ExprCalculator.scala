@@ -15,8 +15,10 @@
           case '*' | '/' => 2
           case '%' => 3
           case '^' => 4
-
-        }
+         // case '(' => stack.push(ch)
+          //case ')' => gotParen(ch)
+         // case  '_' => output = output + ch
+         }
         -1
       }
       // to postfix expression.
@@ -30,16 +32,26 @@ def toPostfix(exp: String): String =
         {
           val c: Char = exp.charAt(i)
           // If the scanned character is an operand, add it to output.
-          if (java.lang.Character.isLetterOrDigit(c)) result += c
-          else // an operator is encountered
-              {
+          if (java.lang.Character.isDigit(c)) result += c
+          else if (c == '('){result += c}
+            // an operator is encountered
+            else  {
               while (!stack.isEmpty && Order(c) < Order(stack.peek())) 
                      {
                       result += stack.pop() 
                      }
               stack.push(c)
-              }
+              gitgit
+          }
          }
+  /*def gotParen(ch: Char): Any = {
+    
+      while (!stack.isEmpty) {
+        val chx: Any = stack.pop()
+        if (chx == '(') {//
+        } else output = output + chx
+      }
+    }*/
     // pop all the operators from the stack
         while (!stack.isEmpty) 
         {
@@ -51,8 +63,13 @@ def toPostfix(exp: String): String =
 def evaluate(exp: String): Int = {
         //create a stack
         val stack: Stack[Integer] = new Stack[Integer]()
+        val first = exp.charAt(0)
+        val second = exp.charAt(1)
+        stack.push(first-'0')
+        stack.push(second-'0')
         for (i <- 0 until exp.length) {
           val c: Char = exp.charAt(i)
+
         // push it to the stack.
           if (java.lang.Character.isDigit(c)) stack.push(c - '0')
           else {
@@ -76,8 +93,8 @@ def evaluate(exp: String): Int = {
         println("Please Enter input string")
         exp = br.readLine()
         val output: String =toPostfix(exp)
-        //println(output)
-        val expression = output.mkString(" ")
+        println(output)
+        //val expression = output.mkString(" ")
         println("Output of "+exp+" = " + evaluate(output))
       }
 }
